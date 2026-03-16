@@ -25,9 +25,9 @@ AEnemigo::AEnemigo()
 	MallaEnemigo->SetWorldScale3D(FVector(1.5f, 1.5f, 1.5f));
 
 	// Configuración inicial del movimiento
-	VelocidadAvance = 250.0f;
-	AmplitudZigZag = 150.0f;
-	FrecuenciaZigZag = 2.0f;
+	VelocidadAvance = 25.0f;
+	AmplitudZigZag = 250.0f;
+	FrecuenciaZigZag = 5.0f;
 	RadioCircular = 60.0f;
 	VelocidadCircular = 3.0f;
 	VelocidadRotacion = FRotator(0.0f, 120.0f, 180.0f);
@@ -52,7 +52,7 @@ void AEnemigo::Tick(float DeltaTime)
 	TiempoTranscurrido += DeltaTime;
 
 	// Avance constante en X
-	float OffsetX = VelocidadAvance * TiempoTranscurrido;
+	float OffsetY = VelocidadAvance * TiempoTranscurrido;
 
 	// Zigzag en Y
 	float OffsetZigZagY = FMath::Sin(TiempoTranscurrido * FrecuenciaZigZag) * AmplitudZigZag;
@@ -62,7 +62,7 @@ void AEnemigo::Tick(float DeltaTime)
 	float OffsetCircularZ = FMath::Sin(TiempoTranscurrido * VelocidadCircular) * RadioCircular;
 
 	FVector NuevaPosicion = PosicionInicial;
-	NuevaPosicion.X += OffsetX;
+	NuevaPosicion.X += OffsetY;
 	NuevaPosicion.Y += OffsetZigZagY + OffsetCircularY;
 	NuevaPosicion.Z += OffsetCircularZ;
 

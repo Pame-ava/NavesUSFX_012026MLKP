@@ -58,7 +58,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEnemigo)
 
 
-#define NavesUSFX_012026_Source_NavesUSFX_012026_Enemigo_h_14_PRIVATE_PROPERTY_OFFSET
+#define NavesUSFX_012026_Source_NavesUSFX_012026_Enemigo_h_14_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__MallaEnemigo() { return STRUCT_OFFSET(AEnemigo, MallaEnemigo); }
+
+
 #define NavesUSFX_012026_Source_NavesUSFX_012026_Enemigo_h_11_PROLOG
 #define NavesUSFX_012026_Source_NavesUSFX_012026_Enemigo_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

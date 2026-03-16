@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX_012026_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x624D2E5F,
+				0x388C2F02,
 				0xE4C5621F,
 				METADATA_PARAMS(nullptr, 0)
 			};

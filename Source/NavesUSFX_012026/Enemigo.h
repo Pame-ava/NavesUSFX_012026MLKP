@@ -35,7 +35,9 @@ public:
 
 private:
 
+	UPROPERTY(VisibleAnywhere, Category = "Componentes")
 	UStaticMeshComponent* MallaEnemigo;
+
 	float VelocidadAvance;
 	float AmplitudZigZag;
 	float FrecuenciaZigZag;
