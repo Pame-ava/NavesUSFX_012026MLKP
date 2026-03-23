@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NavesUSFX_012026.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1E4C2840-42A7-4C16-B5AA-939C45D88E2C}</UniqueIdentifier>
+      <UniqueIdentifier>{72189CFB-F46B-4F23-B9FD-881F09890BB4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NavesUSFX_012026.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,11 @@
     <None Include="..\..\Source\NavesUSFX_012026Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.gitignore.txt" />
     <Filter Include="Config">
-      <UniqueIdentifier>{6D669AC5-FEA5-4888-B5FD-36E62A72EF27}</UniqueIdentifier>
+      <UniqueIdentifier>{C192B34E-A9BB-45DA-94BF-8F3FB16C8C06}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NavesUSFX_012026">
-      <UniqueIdentifier>{A61E3C2D-9140-477C-AB2B-C27E6E34E221}</UniqueIdentifier>
+      <UniqueIdentifier>{682AA0D1-379B-4342-A859-DD5B6B00DB20}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NavesUSFX_012026\Enemigo.cpp">
       <Filter>Source\NavesUSFX_012026</Filter>
@@ -42,6 +45,24 @@
       <Filter>Source\NavesUSFX_012026</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\NavesUSFX_012026\Enemigo1.h">
+      <Filter>Source\NavesUSFX_012026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX_012026\EnemigoAcuatico.cpp">
+      <Filter>Source\NavesUSFX_012026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX_012026\EnemigoAcuatico.h">
+      <Filter>Source\NavesUSFX_012026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX_012026\EnemigoAereo.cpp">
+      <Filter>Source\NavesUSFX_012026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX_012026\EnemigoAereo.h">
+      <Filter>Source\NavesUSFX_012026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX_012026\EnemigoTerrestre.cpp">
+      <Filter>Source\NavesUSFX_012026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX_012026\EnemigoTerrestre.h">
       <Filter>Source\NavesUSFX_012026</Filter>
     </ClInclude>
     <None Include="..\..\Source\NavesUSFX_012026\NavesUSFX_012026.Build.cs">

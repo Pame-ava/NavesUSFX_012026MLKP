@@ -24,7 +24,8 @@ AEnemigo::AEnemigo()
 	// Escala para que se vea mejor
 	MallaEnemigo->SetWorldScale3D(FVector(1.5f, 1.5f, 1.5f));
 
-	// Configuración inicial del movimiento
+    /*
+    	// Configuración inicial del movimiento
 	VelocidadAvance = 25.0f;
 	AmplitudZigZag = 250.0f;
 	FrecuenciaZigZag = 5.0f;
@@ -33,6 +34,8 @@ AEnemigo::AEnemigo()
 	VelocidadRotacion = FRotator(0.0f, 120.0f, 180.0f);
 
 	TiempoTranscurrido = 0.0f;
+
+    */
 }
 
 // Called when the game starts or when spawned
@@ -41,15 +44,76 @@ void AEnemigo::BeginPlay()
 	Super::BeginPlay();
 	
 	PosicionInicial = GetActorLocation();
+	PuntosRuta.Empty();
+
+	// Agregar punto inicial
+	PuntosRuta.Add(PosicionInicial);
+ // contenerdores 
+	// Generar 10 waypoints aleatorios (líneas rectas H/V/D) 
+	for (int32 i = 0; i < 10; i++)
+	{
+		float X = FMath::RandRange(WorldLimitesMin.X, WorldLimitesMax.X);
+		float Y = FMath::RandRange(WorldLimitesMin.Y, WorldLimitesMax.Y);
+		FVector NuevoPuntoRuta(X, Y, PosicionInicial.Z);  // Mantiene altura
+		PuntosRuta.Add(NuevoPuntoRuta);
+	}
+	IndicePuntoRutaActual = 1;
 }
 
 // Called every frame
 void AEnemigo::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+    
+    // crear la funcion mover y colocar todo el codigo de movimiento
 
+     if (!bMovimientoAutonomo)
+    {
+        FVector PosicionActual = GetActorLocation();
 
-	TiempoTranscurrido += DeltaTime;
+        float Distancia = FVector::Dist(PosicionActual, PosicionDestinoGameMode);
+
+        if (Distancia <= Tolerancia)
+        {
+            // Waypoint alcanzado, siguiente
+            return;
+        }
+        else
+        {
+            // Mover en línea recta
+            FVector Direccion = (PosicionDestinoGameMode - PosicionActual).GetSafeNormal();
+            FVector NuevaUbicacion = PosicionActual + (Direccion * VelocidadMovimiento * DeltaTime);
+            SetActorLocation(NuevaUbicacion);
+        }
+    }
+    else if (PuntosRuta.Num() > 1)
+    {
+        FVector UbicacionActual = GetActorLocation();
+        FVector UbicacionDestino = PuntosRuta[IndicePuntoRutaActual];
+
+        float Distancia = FVector::Dist(UbicacionActual, UbicacionDestino);
+
+        if (Distancia <= Tolerancia)
+        {
+            // Waypoint alcanzado, siguiente
+            IndicePuntoRutaActual++;
+            if (IndicePuntoRutaActual >= PuntosRuta.Num())
+            {
+                // Volver al inicio
+                IndicePuntoRutaActual = 0;
+            }
+        }
+        else
+        {
+            // Mover en línea recta
+            FVector Direccion = (UbicacionDestino - UbicacionActual).GetSafeNormal();
+            FVector NuevaUbicacion = UbicacionActual + (Direccion * VelocidadMovimiento * DeltaTime);
+            SetActorLocation(NuevaUbicacion);
+        }
+    }
+ // funcion mover del actor lab 1 controlar los limites 
+     /*
+     	TiempoTranscurrido += DeltaTime;
 
 	// Avance constante en X
 	float OffsetY = VelocidadAvance * TiempoTranscurrido;
@@ -69,26 +133,7 @@ void AEnemigo::Tick(float DeltaTime)
 	SetActorLocation(NuevaPosicion);
 
 	// Rotación constante
-	AddActorLocalRotation(VelocidadRotacion * DeltaTime);
-
-   /* if (!bMovimientoAutonomo)
-    {
-        FVector PosicionActual = GetActorLocation();
-
-        float Distancia = FVector::Dist(PosicionActual, PosicionDestinoGameMode);
-
-        if (Distancia <= Tolerancia)
-        {
-            // Waypoint alcanzado, siguiente
-            return;
-        }
-        else
-        {
-            // Mover en línea recta
-            FVector Direccion = (PosicionDestinoGameMode - PosicionActual).GetSafeNormal();
-            FVector NuevaUbicacion = PosicionActual + (Direccion * VelocidadMovimiento * DeltaTime);
-            SetActorLocation(NuevaUbicacion);
-        } 
-    }*/
+AddActorLocalRotation(VelocidadRotacion * DeltaTime);
+     */
 }
 

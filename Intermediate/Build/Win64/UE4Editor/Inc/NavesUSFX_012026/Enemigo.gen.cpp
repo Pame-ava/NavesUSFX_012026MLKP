@@ -17,7 +17,6 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo() {}
 	NAVESUSFX_012026_API UClass* Z_Construct_UClass_AEnemigo();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_NavesUSFX_012026();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AEnemigo::StaticRegisterNativesAEnemigo()
 	{
@@ -32,11 +31,6 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MallaEnemigo_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MallaEnemigo;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -50,17 +44,6 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo() {}
 		{ "ModuleRelativePath", "Enemigo.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemigo_Statics::NewProp_MallaEnemigo_MetaData[] = {
-		{ "Category", "Componentes" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Enemigo.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemigo_Statics::NewProp_MallaEnemigo = { "MallaEnemigo", nullptr, (EPropertyFlags)0x00400000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemigo, MallaEnemigo), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemigo_Statics::NewProp_MallaEnemigo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemigo_Statics::NewProp_MallaEnemigo_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemigo_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemigo_Statics::NewProp_MallaEnemigo,
-	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AEnemigo_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEnemigo>::IsAbstract,
 	};
@@ -70,11 +53,11 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		Z_Construct_UClass_AEnemigo_Statics::PropPointers,
+		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		UE_ARRAY_COUNT(Z_Construct_UClass_AEnemigo_Statics::PropPointers),
+		0,
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AEnemigo_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemigo_Statics::Class_MetaDataParams))
@@ -88,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemigo() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemigo, 3430362554);
+	IMPLEMENT_CLASS(AEnemigo, 1801098835);
 	template<> NAVESUSFX_012026_API UClass* StaticClass<AEnemigo>()
 	{
 		return AEnemigo::StaticClass();

@@ -6,6 +6,9 @@
 #include "GameFramework/GameModeBase.h"
 #include "NavesUSFX_012026GameMode.generated.h"
 
+class AEnemigo;
+class APawn;
+
 UCLASS(MinimalAPI)
 class ANavesUSFX_012026GameMode : public AGameModeBase
 {
@@ -14,10 +17,29 @@ class ANavesUSFX_012026GameMode : public AGameModeBase
 public:
 	ANavesUSFX_012026GameMode();
 
-protected:
+public:
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 
-private:
+
+public:
+
+	TArray<AEnemigo*> AEnemigos;
+
+	FTimerHandle TimerFormacion;
+
+	void FormarNavesFrentePawn();
+	void DispersarNaves();
+
+	APawn* PlayerPawn;  // Referencia al Pawn
+
+	float IntervaloFormacion = 5.0f;
+
+	float EspaciadoVertical = 100.0f;
+	float EspaciadoHorizontal = 100.0f;
+
+	/*
+	private:
 	UPROPERTY(EditAnywhere, Category = "Spawn")
 	TSubclassOf<class AEnemigo> ClaseEnemigoDona;
 
@@ -26,7 +48,11 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Spawn")
 	FRotator RotacionSpawn;
+
+	*/
 };
+//UPROPERTY MUESRA EN EL EDITOR, PERMITE CONFIGURARLO DESDE EL EDITOR,
+// SE PUEDE CONFIGURAR EN TIEMPO DE EJECUCIÓN, PERMITE CONFIGURARLO EN BLUEPRINTS
 
 
 

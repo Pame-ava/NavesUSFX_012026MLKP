@@ -1,0 +1,23 @@
+# Carpetas temporales y compilados (IGNORAR)
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vscode/
+.vs/
+
+# Archivos de solución de Visual Studio
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# Archivos de usuario de Unreal
+FileOpenOrder/
+
+# Si usas programas de diseño
+*.psd
+*.fbx

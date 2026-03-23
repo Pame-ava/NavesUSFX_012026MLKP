@@ -17,10 +17,6 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX_012026GameMode() {}
 	NAVESUSFX_012026_API UClass* Z_Construct_UClass_ANavesUSFX_012026GameMode();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_NavesUSFX_012026();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	NAVESUSFX_012026_API UClass* Z_Construct_UClass_AEnemigo_NoRegister();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 // End Cross Module References
 	void ANavesUSFX_012026GameMode::StaticRegisterNativesANavesUSFX_012026GameMode()
 	{
@@ -35,19 +31,6 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX_012026GameMode() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClaseEnemigoDona_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ClaseEnemigoDona;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PosicionSpawn_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PosicionSpawn;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RotacionSpawn_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RotacionSpawn;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -63,32 +46,6 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX_012026GameMode() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_ClaseEnemigoDona_MetaData[] = {
-		{ "Category", "Spawn" },
-		{ "ModuleRelativePath", "NavesUSFX_012026GameMode.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_ClaseEnemigoDona = { "ClaseEnemigoDona", nullptr, (EPropertyFlags)0x0044000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANavesUSFX_012026GameMode, ClaseEnemigoDona), Z_Construct_UClass_AEnemigo_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_ClaseEnemigoDona_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_ClaseEnemigoDona_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_PosicionSpawn_MetaData[] = {
-		{ "Category", "Spawn" },
-		{ "ModuleRelativePath", "NavesUSFX_012026GameMode.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_PosicionSpawn = { "PosicionSpawn", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANavesUSFX_012026GameMode, PosicionSpawn), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_PosicionSpawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_PosicionSpawn_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_RotacionSpawn_MetaData[] = {
-		{ "Category", "Spawn" },
-		{ "ModuleRelativePath", "NavesUSFX_012026GameMode.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_RotacionSpawn = { "RotacionSpawn", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANavesUSFX_012026GameMode, RotacionSpawn), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_RotacionSpawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_RotacionSpawn_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_ClaseEnemigoDona,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_PosicionSpawn,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::NewProp_RotacionSpawn,
-	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ANavesUSFX_012026GameMode>::IsAbstract,
 	};
@@ -98,11 +55,11 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX_012026GameMode() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::PropPointers,
+		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::PropPointers),
+		0,
 		0,
 		0x008802ACu,
 		METADATA_PARAMS(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX_012026GameMode_Statics::Class_MetaDataParams))
@@ -116,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX_012026GameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANavesUSFX_012026GameMode, 184802670);
+	IMPLEMENT_CLASS(ANavesUSFX_012026GameMode, 2738536884);
 	template<> NAVESUSFX_012026_API UClass* StaticClass<ANavesUSFX_012026GameMode>()
 	{
 		return ANavesUSFX_012026GameMode::StaticClass();

@@ -1,5 +1,0 @@
-C:\Users\hp VICTUS\Documents\Unreal Projects\NavesUSFX_012026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX_012026\Definitions.NavesUSFX_012026.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\hp VICTUS\Documents\Unreal Projects\NavesUSFX_012026\Source\NavesUSFX_012026/Enemigo.h
-C:\Users\hp VICTUS\Documents\Unreal Projects\NavesUSFX_012026\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX_012026\Enemigo.generated.h

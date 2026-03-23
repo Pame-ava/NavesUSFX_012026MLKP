@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX_012026_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x388C2F02,
-				0xE4C5621F,
+				0xE0A2794F,
+				0x402EB1C3,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
